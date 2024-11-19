@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-
+import { faker } from '@faker-js/faker';
 export class MessageFormPage {
     readonly page: Page;
 
@@ -15,3 +15,12 @@ export class MessageFormPage {
         await this.page.locator('#description').fill(data.description);
     }
 }
+
+export const generateFormData = () => ({
+    name: faker.person.fullName(),
+    email: faker.internet.email(),
+    phone: faker.phone.number({ style: 'international' }),
+    subject: faker.lorem.words(10),
+    description: faker.lorem.sentence(10),
+});
+
