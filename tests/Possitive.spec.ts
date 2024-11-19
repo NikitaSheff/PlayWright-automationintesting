@@ -6,6 +6,7 @@ import {MessageFormPage} from "../PO/contactForm";
 import { faker } from '@faker-js/faker'; // Для генерации случайных данных
 //берем данные из json, для использования в тесте
 let config: any;
+
 //можно использовать faker.js, как альтернатива ручной генерации
 const RandomName: string = `${RandomHelper.getRandomString()} MyName`
 const RandomEmail: string = `${RandomHelper.getRandomString()}@random.com`

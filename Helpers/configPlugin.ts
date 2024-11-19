@@ -1,6 +1,5 @@
 import { promises as fs } from 'fs';
 
-// Хранилище данных из JSON
 let cachedConfig: any | null = null;
 
 async function loadConfig(): Promise<any> {
