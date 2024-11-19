@@ -15,7 +15,7 @@ const RandomTel: string = `8${RandomHelper.getRandomInt(9990000000, 9999999999).
 test.beforeAll(async () => {
     config = await loadConfig();
 });
-test.skip('UI - Submit contact form', async ({ page }) => {
+test('UI - Submit contact form', async ({ page }) => {
     const formPage = new MessageFormPage(page);
     const formData = {
         name: RandomName,
@@ -24,6 +24,7 @@ test.skip('UI - Submit contact form', async ({ page }) => {
         subject: config.subjectText,
         description: config.descriptionText
     };
+    
     await page.goto('/');
 
     // Проверяем, что форма отображается
@@ -50,8 +51,6 @@ test.skip('UI - Submit contact form', async ({ page }) => {
     await expect(page.locator('.row.contact').first()).toContainText('Thanks for getting in touch');
     await expect(page.locator('.row.contact').first()).toContainText(config.subjectText);
 });
-
-
 
 test('API - Submit contact form via API', async ({ request }) => {
     // Генерация случайных данных
