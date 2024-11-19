@@ -1,0 +1,16 @@
+{
+  "name": "donteco",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.9.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.2.0"
+  }
+}
